@@ -46,7 +46,7 @@ export function hashIdentifier(identifier: string, keyword: string, prefix: stri
     if (!newIdentifier.startsWith(prefix)) return identifier;
     const identifierName = newIdentifier.slice(prefix.length);
     if (!includesIgnoreCase(identifierName, keyword)) return identifier;
-    return `${prefix}${hashString(identifierName)}`; // identifier instead of identifierName
+    return `${prefix}${hashString(identifierName)}`; 
 }
 
 export function hashArrayData(arrayData: string[], dataType: string, keyword: string): string[] {
