@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@plugin "daisyui";
+
+@font-face {
+  font-family: "minecraftBig";
+  src: url("../../public/fonts/MinecraftTen.ttf") format("truetype");
+}
+@font-face {
+  font-family: "minecraftSmall";
+  src: url("../../public/fonts/MinecraftSeven.ttf") format("truetype");
+}
+@theme{
+  --minecraftSmall: "minecraftSmall";
+  --minecraftBig: "minecraftBig";
+}
+
+.mirage-bg{
+  background-image: url("../../public/images/mirage_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.fadeBg {
+  background: linear-gradient(180deg, rgb(13, 91, 120) 0%, rgb(0, 0, 0) 100%);
+}
+
+.confirmButton{
+  color: #fdfdfd;
+  font-size: 1.2em;
+  border: 0.2em solid #7dabff;
+  background-color: oklch(58.8% 0.158 241.966);
+  box-shadow: 0 6px 0 0 #005d95;
+  max-width: 28em;
+  padding: 16px 60px 16px 60px;
+}
+
+
+.confirmButton-mobile{
+  color: #fdfdfd;
+  font-size: 1.1em;
+  border: 0.2em solid #7dabff;
+  max-width: 20em;
+  background-color: oklch(58.8% 0.158 241.966);
+  box-shadow: 0 3px 0 0 #005d95;
+  padding: 16px 20px 16px 20px !important;
+}
+
+.modalButton{
+  font-size: 0.8em;
+  color: white;
+  border: 0.2em solid #7dabff;
+  background-color: oklch(58.8% 0.158 241.966);
+  box-shadow: 0 3px 0 0 #005d95;
+  margin: 10px 5px 10px 5px;
+  padding: 1px 40px 3px 40px;
+}
+
+.confirmButton-mobile:hover{
+  background-color: oklch(0.635 0.16 245.268);
+  cursor: pointer;
+}
+
+.confirmButton-mobile:active{
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.modalButton:hover{
+  background-color: oklch(0.635 0.16 245.268);
+  cursor: pointer;
+}
+
+.confirmButton:hover{
+  background-color: oklch(0.534 0.135 245.183);
+  cursor: pointer;
+}
+
+.modalButton:active{
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.confirmButton:active{
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+body {
+  font-family: var(--minecraftSmall), Helvetica, sans-serif;
+}
+
