@@ -1,6 +1,6 @@
 # MirageObfuscator
 
-A powerful obfuscation tool for protecting your Minecraft Bedrock Edition resource packs from unauthorized access and theft.
+An obfuscation tool for partly protecting your Minecraft Bedrock Edition resource packs
 
 ## 🛡️ What Gets Obfuscated
 
