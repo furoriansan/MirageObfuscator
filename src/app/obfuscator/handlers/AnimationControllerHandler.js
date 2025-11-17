@@ -6,15 +6,10 @@ import path from "path";
 export class AnimationControllerHandler {
     static handle(cachePath, keyword) {
         const dirPath = `${cachePath}/animation_controllers/`;
-
-        // TODO: Fix that this runs through all folders and files
-
         const animControlFiles= FileHandler.getAllFiles(dirPath);
-
         if(animControlFiles.length === 0) {
             return true;
         }
-
         animControlFiles.forEach(filePath => {
             console.info(`Obfuscating ${filePath}`);
 
@@ -52,7 +47,6 @@ export class AnimationControllerHandler {
                                 if (typeof animation === "string") {
                                     const animName = includesIgnoreCase(animation, keyword) ? hashString(animation) : animation;
                                     obfuscatedController.setAnimationStateData(ctrlName, newStateName, animName);
-                                    console.log("Animation string:", animation, "->", animName);
                                 } else if (typeof animation === "object" && animation !== null) {
                                     const keys = Object.keys(animation);
                                     if (keys.length !== 1) {
@@ -67,7 +61,6 @@ export class AnimationControllerHandler {
                                         console.warn("hashMolangExp did not return string for:", animData);
                                     }
                                     obfuscatedController.setAnimationStateData(ctrlName, newStateName, hashedAnimName, hashedAnimData);
-                                    console.log("Animation object:", animName, animData, "->", hashedAnimName, hashedAnimData);
                                 } else {
                                     console.warn("Unexpected animation entry type:", animation);
                                 }
